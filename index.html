@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Котики</title>
+</head>
+<body style="background-image: url(./assets/images/pexels-madison-inouye-1831234.jpg); background-size: 100vw">
+    <h1 style="text-align: center; color: #F73D93">Анкета</h1>
+    <div style="display:flex; justify-content:center;">
+        <object data="./assets/images/giphy.gif" width="200"></object>
+    </div>
+    <form>
+        <div
+            style="background-color: #F9CEEE30;">
+            <fieldset style="border: dotted #F73D93;">
+                <legend>Контактные данные</legend>
+                <input type="text" name="petNickname" placeholder="Кличка питомца" /><br>
+                <input type="text" name="ownerName"placeholder="Имя владельца" required/>*<br>
+                <input id="email" type="email" name="contactDetails" placeholder="Эл. почта" required/>*
+                <div class="errorsInfo"></div>
+            </fieldset>
+        </div>
+        <div style="background-color: #F9CEEE50;">
+            <p>Выбери породу:</p>
+            <select id="breed">
+                <option>Британская короткошерстная</option>
+                <option >Персидская</option>
+                <option>Сфинкс</option>
+                <option>Бенгальская</option>
+                <option>Шотландская вислоухая</option>
+                <option>Ангорская</option>
+                <option>Сиамская</option>
+                <option>Мейн-Кун</option>
+                <option>другое</option>
+            </select>
+            <input type="text" name="other" placeholder="Мой вариант">
+            <p>Чем питается?</p>
+            <input type="checkbox" name="food" value="Сухой корм" id="dry"><label for="dry">Сухой корм</label><br>
+            <input type="checkbox" name="food" value="Влажный корм" id="wet"><label for="wet">Влажный корм</label> <br>
+            <input type="checkbox" name="food" value="Натуральный корм" id="natural"><label for="natural">Натуральный корм</label><br>
+            <p>Пол питомца</p>
+            <input type="radio" name="sex" value="Самец" id="m"><label for="m">Самец</label><br>
+            <input type="radio" name="sex" value="Самка" id="f"><label for="f">Самка</label>
+        </div>
+        <div style="background-color: #F9CEEE80;">
+            <p>Комментарий</p>
+            <textarea cols="30" rows="5" placeholder="Если есть что добавить"></textarea>
+            <div>
+                <label for="photo">Загрузи фото питомца </label><input type="file" name="photo" id="photo"> <br><br>
+                <button id="btn">Сохранить</button>
+                <img src="./assets/images/Tired-Cat-Transparent-PNG.png" alt="cat-pic"
+                    style="width: 50vw; position: absolute; left: 45vw; top: 33vw;">
+            </div>
+        </div>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
