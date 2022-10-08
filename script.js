@@ -29,9 +29,24 @@ function checkedCheckbox(check) {
         }
     }
     return checkedValue.join();
-}
 
-btn.addEventListener("click", () => {
+
+function sendData(e) {
     let cat = new Cat (cat_name.value, getBreed(), checkedCheckbox(food), checkedCheckbox(sex));
     console.log(cat);
-});
+
+    e.preventDefault();
+
+    fetch("https://httpbin.org/post",
+    {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => response.json())
+    .then(user => {
+        console.log(user);
+    })
+    .catch(error => console.log(error)); 
+}
+
+btn.addEventListener("click", sendData);
